@@ -14,6 +14,7 @@ automating the search procedure on the Amazon site, scraping relevant informatio
 displaying comprehensively in a tabular format making it easy for the user to compare 
 and analyze for a better purchase decision on Amazon.
 
+![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/amazon_products.JPG)
 
 ## Project Organization
 ---------------------------------------------------------
