@@ -1,7 +1,7 @@
 # Amazon Product Scraping
 ==============================
 
-Scraping amazon products based on a user search.
+Web scraping amazon products based on a user search.
 
 ## Introduction
 Browsing Amazon can be very confusing due to inconsistent layouts and web page structure. 
