@@ -1,5 +1,5 @@
 # Amazon Product Scraping
-==============================
+==============================================
 
 Web scraping amazon products based on a user search.
 
