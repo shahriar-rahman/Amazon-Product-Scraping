@@ -6,7 +6,7 @@ An automated scraping tool that locates a particular product and, by utilizing t
 </br></br>
 
 <div align="center">
-    <img width="75%" src="img/amazon1.gif" alt="amazon.gif" >
+    <img width="65%" src="img/amazon1.gif" alt="amazon.gif" >
 </div>
 
 </br></br>
