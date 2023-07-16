@@ -30,6 +30,8 @@ However, it is important to mention that browsing the site can pose some challen
 * Ensure the data scraped does not contain any missing values
 * Briefly explore the acquired data
 
+</br></br>
+
 ### ◘ Approach
 The primary incentive of this research is to:
 * Initiate a search for a user's preferred item (i.e. iPhone)
@@ -38,6 +40,7 @@ The primary incentive of this research is to:
 * Scrape only the necessary tags such as title, ratings, price, descriptions, and total ratings
 * Use Pandas and Matplotlib libraries to visualize and ensure the data stands out
 
+</br></br>
 
 ## Project Organization
 ---------------------------------------------------------
