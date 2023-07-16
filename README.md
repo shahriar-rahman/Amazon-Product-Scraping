@@ -6,25 +6,39 @@ An automated scraping tool that locates a particular product and, by utilizing t
 </br></br>
 
 <div align="center">
-    <img width="75%" src="img/amazon1.gif" alt="amazon.gif" >
+    <img width="65%" src="img/amazon1.gif" alt="amazon.gif" >
 </div>
 
 </br></br>
 
 ### Introduction
-Browsing Amazon can be very confusing due to inconsistent layouts and web page structure. 
-More importantly, the site can often be quite slow to browse due to so much traffic. 
-Furthermore, comparing multiple products is much more difficult to infer as it requires browsing 
-all the links for different products. 
+Amazon.com is an American multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence. It has been often referred to as "one of the most influential economic and cultural forces in the world," and is often regarded as one of the world's most valuable brands. Additionally, it is considered one of the Big Five American technology companies, alongside Alphabet (parent company of Google), Apple, Meta (formerly Facebook, Inc.), and Microsoft. Amazon was founded by Jeff Bezos from his garage in Bellevue, Washington.
 
-The primary incentive of this project is to bypass the inconvenience a user would face by 
-automating the search procedure on the Amazon site, scraping relevant information, and 
-displaying comprehensively in a tabular format making it easy for the user to compare 
-and analyze for a better purchase decision on Amazon.
+However, it is important to mention that browsing the site can pose some challenges as it is quite confusing due to the lackluster layouts and inconsistent web page structure. Furthermore, the site can often be quite slow to browse due to extensive traffic. As a result, comparing multiple products can be a much more difficult process than it seems as it affects the user's decision-making as it requires browsing all the links for the same type of products with different specifications. Therefore, it is imperative to bypass the inconvenience a user might face otherwise, by automating the search procedure on the Amazon site, scraping relevant information, and displaying comprehensively in a tabular format making it easy for the user to compare and analyze for a better purchase decision on Amazon.
 
 </br></br>
 
-![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/amazon_products.JPG)
+![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/amazon_products1.jpg)
+
+</br></br>
+
+### ◘ Objective
+* Automate web browsing for better convenience
+* Utilize Selenium Webdriver to achieve the targeted goal
+* Use concepts of web-scraping to find and traverse the correct Document Object Model (DOM) structure.
+* Conduct extensive search till the end of pages
+* Ensure the data scraped does not contain any missing values
+* Briefly explore the acquired data
+
+</br></br>
+
+### ◘ Approach
+The primary incentive of this research is to:
+* Initiate a search for a user's preferred item (i.e. iPhone)
+* Crawl to the Amazon site and locate all the links relevant to the target item
+* Use the Pagination concept to transition between pages
+* Scrape only the necessary tags such as title, ratings, price, descriptions, and total ratings
+* Use Pandas and Matplotlib libraries to visualize and ensure the data stands out
 
 </br></br>
 
