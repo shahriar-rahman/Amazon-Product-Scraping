@@ -1,13 +1,17 @@
-# Amazon Product Scraping
-==============================================
+# Scraping Amazon Products based on a User Search
+===========================================================================
 
 An automated scraping tool that locates a particular product and, by utilizing the Selenium Webdriver, crawls and extracts all the information based on a user search. This is an updated version of the project with the new Selenium update as well as improvements in file organization, code refactoring, and improvements.
 
+</br></br>
+
 <div align="center">
-    <img width="75%" src="img/amazon.gif" alt="amazon.gif" >
+    <img width="75%" src="img/amazon1.gif" alt="amazon.gif" >
 </div>
 
-## Introduction
+</br></br>
+
+### Introduction
 Browsing Amazon can be very confusing due to inconsistent layouts and web page structure. 
 More importantly, the site can often be quite slow to browse due to so much traffic. 
 Furthermore, comparing multiple products is much more difficult to infer as it requires browsing 
@@ -18,7 +22,11 @@ automating the search procedure on the Amazon site, scraping relevant informatio
 displaying comprehensively in a tabular format making it easy for the user to compare 
 and analyze for a better purchase decision on Amazon.
 
+</br></br>
+
 ![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/amazon_products.JPG)
+
+</br></br>
 
 ## Project Organization
 ---------------------------------------------------------
@@ -66,4 +74,6 @@ and analyze for a better purchase decision on Amazon.
 
 • DataFrame Manipulation using Pandas
 
-• Data Storage using CSV, Excel, JSON and XML format
+• Data Storage using CSV, Excel, and JSON format
+
+===========================================================================
