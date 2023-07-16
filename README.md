@@ -7,7 +7,9 @@ An automated scraping tool that locates a particular product and, by utilizing t
     <img width="75%" src="img/amazon1.gif" alt="amazon.gif" >
 </div>
 
-## Introduction
+</br></br>
+
+### Introduction
 Browsing Amazon can be very confusing due to inconsistent layouts and web page structure. 
 More importantly, the site can often be quite slow to browse due to so much traffic. 
 Furthermore, comparing multiple products is much more difficult to infer as it requires browsing 
@@ -18,7 +20,11 @@ automating the search procedure on the Amazon site, scraping relevant informatio
 displaying comprehensively in a tabular format making it easy for the user to compare 
 and analyze for a better purchase decision on Amazon.
 
+</br></br>
+
 ![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/amazon_products.JPG)
+
+</br></br>
 
 ## Project Organization
 ---------------------------------------------------------
