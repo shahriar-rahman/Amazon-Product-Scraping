@@ -64,8 +64,8 @@ and analyze for a better purchase decision on Amazon.
 
 • Nested Pagination
 
-===========================================================================
-
 • DataFrame Manipulation using Pandas
 
-• Data Storage using CSV, Excel, JSON and XML format
+• Data Storage using CSV, Excel, and JSON format
+
+===========================================================================
