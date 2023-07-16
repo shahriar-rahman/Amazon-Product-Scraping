@@ -22,6 +22,23 @@ However, it is important to mention that browsing the site can pose some challen
 
 </br></br>
 
+### ◘ Objective
+* Automate web browsing for better convenience
+* Utilize Selenium Webdriver to achieve the targeted goal
+* Use concepts of web-scraping to find and traverse the correct Document Object Model (DOM) structure.
+* Conduct extensive search till the end of pages
+* Ensure the data scraped does not contain any missing values
+* Briefly explore the acquired data
+
+### ◘ Approach
+The primary incentive of this research is to:
+* Initiate a search for a user's preferred item (i.e. iPhone)
+* Crawl to the Amazon site and locate all the links relevant to the target item
+* Use the Pagination concept to transition between pages
+* Scrape only the necessary tags such as title, ratings, price, descriptions, and total ratings
+* Use Pandas and Matplotlib libraries to visualize and ensure the data stands out
+
+
 ## Project Organization
 ---------------------------------------------------------
 
