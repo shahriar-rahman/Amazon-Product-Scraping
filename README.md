@@ -24,7 +24,7 @@ and analyze for a better purchase decision on Amazon.
 
 </br></br>
 
-![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/amazon_products.JPG)
+![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/amazon_products1.jpg)
 
 </br></br>
 
