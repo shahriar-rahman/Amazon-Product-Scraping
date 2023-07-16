@@ -42,6 +42,22 @@ The primary incentive of this research is to:
 
 </br></br>
 
+### ◘ Study Flowchart
+![alt text](https://github.com/shahriar-rahman/Amazon-Product-Scraping/blob/main/img/flowchart.png)
+
+</br></br>
+
+### ◘ Methodologies & Concepts applied
+* Selenium Webdriver
+* Expected Conditions
+* Implicit and Explicit Waits
+* Chrome and Chrome Options
+* Nested Pagination
+* Data Storage based on Excel, CSV, and JSON
+* Pandas and Matplotlib for examining the Scraped data
+
+</br></br>
+
 ## Project Organization
 ---------------------------------------------------------
 
