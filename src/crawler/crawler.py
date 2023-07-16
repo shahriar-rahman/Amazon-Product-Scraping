@@ -1,21 +1,28 @@
-# Objective: Scrape product specs based on a search on Amazon
+import os
+import sys
+import time as t
+import pandas as pd
 from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.ui import WebDriverWait as WdW
-import time as t
-import pandas as pd
+sys.path.append(os.path.abspath('../controller'))
+import controller
 
 
 class SeleniumDriver:
     def __init__(self):
         # Driver Set-ups
-        start_urls = 'https://www.amazon.com/'
-        self.product_search = "iphone"
+        self.ctrl = controller.Controller()
+        start_urls = self.ctrl.get_url_link()
+        user_search = self.ctrl.get_user_search()
+
+        self.product_search = user_search
         self.options = ChromeOptions()
         self.options.add_experimental_option("detach", True)
-        self.options.add_argument('--headless')
+        self.options.add_argument("--headless=new")
+        self.options.add_argument('window-size=1920x1080')
 
         self.driver = Chrome(options=self.options)
         self.temp_driver = ''
@@ -36,13 +43,12 @@ class SeleniumDriver:
         self.df = pd.DataFrame(columns=['product_names', 'prices', 'product_desc', 'ratings', 'total_ratings',
                                         'links', 'asin'])
 
-    @staticmethod
-    def popup_handler(driver):
+    def popup_handler(self, driver):
         # Supress popups
+        popup_path = self.ctrl.get_popup_path()
         try:
             popup = WdW(driver, 10).until(
-                ec.presence_of_element_located((By.XPATH, '//*[@id="nav-main"]/div[1]/div/div/div[3]/span[1]/'
-                                                          'span/input'))
+                ec.presence_of_element_located((By.XPATH, popup_path))
             )
 
         except Exception as exc:
@@ -52,36 +58,38 @@ class SeleniumDriver:
             popup.click()
 
     def load_page(self):
+        text_box = ''
         # Initiate search page
         try:
+            search_id = self.ctrl.get_search_id(1)
             self.popup_handler(self.driver)
 
             text_box = WdW(self.driver, 5).until(
-                ec.presence_of_element_located((By.ID, "twotabsearchtextbox"))
+                ec.presence_of_element_located((By.ID, search_id))
             )
 
         except Exception as exc:
             print("!!! Failed to locate the text box !!!\n", exc)
+            search_id = self.ctrl.get_search_id(2)
+            text_box = WdW(self.driver, 10).until(
+                ec.presence_of_element_located((By.ID, search_id))
+            )
 
-        else:
+        finally:
             text_box.clear()
             text_box.send_keys(self.product_search)
             text_box.send_keys(Keys.ENTER)
-
-        finally:
             self.driver.implicitly_wait(10)
 
     # Nested Pagination
     def access_links(self):
         print('-'*50, '\n' + "◘ Accessing Links...")
+        access_products = self.ctrl.get_product_links()
         temp_container = []
 
         try:
             get_links = WdW(self.driver, 15).until(
-                ec.presence_of_all_elements_located((By.XPATH, '//*[contains(concat( " ", @class, " " ), '
-                                                               'concat( " ", "a-link-normal", " " )) and '
-                                                               'contains(concat( " ", @class, " " ), '
-                                                               'concat( " ", "s-link-style a-text-normal", " " ))]'))
+                ec.presence_of_all_elements_located((By.XPATH, access_products))
             )
 
         except Exception as exc:
@@ -127,39 +135,51 @@ class SeleniumDriver:
                     print(text_message)
 
                     # Nested Try clause for adaptive scraping
+                    price_path = self.ctrl.get_price_path(1)
                     try:
                         price = WdW(self.temp_driver, 10).until(
-                            ec.presence_of_element_located((By.XPATH, '//span[contains(@class, "apexPriceToPay")]'))
+                            ec.presence_of_element_located((By.XPATH, price_path))
                         )
 
                     except Exception as exc:
                         print("!!! Exception encountered for first attempt during price search !!!\n", exc)
+
+                        price_path = self.ctrl.get_price_path(2)
                         price = WdW(self.temp_driver, 10).until(
-                            ec.presence_of_element_located((By.XPATH,'//div[contains(@id, "corePrice_feature_div")]'))
+                            ec.presence_of_element_located((By.XPATH, price_path))
                         )
 
+                    print("◘ Price Extraction successful")
                     text_message = "◘ Checking for product description..."
                     print(text_message)
+
+                    description_id = self.ctrl.get_description()
                     product_desc = WdW(self.temp_driver, 10).until(
-                        ec.presence_of_element_located((By.ID, 'feature-bullets'))
+                        ec.presence_of_element_located((By.ID, description_id))
                     )
 
                     text_message = "◘ Checking for product ratings..."
                     print(text_message)
+
+                    rating_path = self.ctrl.get_rating()
                     rating = WdW(self.temp_driver, 10).until(
-                        ec.presence_of_element_located((By.XPATH, '//span[@data-hook = "rating-out-of-text"]'))
+                        ec.presence_of_element_located((By.XPATH, rating_path))
                     )
 
                     text_message = "◘ Checking for total reviews..."
                     print(text_message)
+
+                    total_reviews_id = self.ctrl.get_total_reviews_id()
                     total_rating = WdW(self.temp_driver, 10).until(
-                        ec.presence_of_element_located((By.ID, 'acrCustomerReviewText'))
+                        ec.presence_of_element_located((By.ID, total_reviews_id))
                     )
 
                     text_message = "◘ Checking specs for ASIN number...\n"
                     print(text_message)
+
+                    asin_path = self.ctrl.get_asin_path()
                     specs = WdW(self.temp_driver, 10).until(
-                        ec.presence_of_all_elements_located((By.XPATH, '//td[@class = "a-size-base prodDetAttrValue"]'))
+                        ec.presence_of_all_elements_located((By.XPATH, asin_path))
                     )
 
                     text_message = "◘ Information scraping successful\n"
@@ -202,7 +222,8 @@ class SeleniumDriver:
 
             # Pagination
             try:
-                next_element = self.driver.find_element(By.XPATH, '//a[contains(@class, "s-pagination-next")]')
+                next_element_path = self.ctrl.get_next_element_path()
+                next_element = self.driver.find_element(By.XPATH, next_element_path)
 
             except Exception as exc:
                 print(exc)
@@ -236,9 +257,16 @@ class SeleniumDriver:
             print("DataFrame storage successful")
 
         # Data set Storage
-        self.df.to_csv('AmazonProducts.csv', sep=',')
-        self.df.to_xml('AmazonProducts.xml')
-        self.df.to_json('AmazonProducts.json')
+        try:
+            self.df.to_csv('../../scraped_data/csv/amazon_products.csv', sep=',')
+            self.df.to_excel('../../scraped_data/excel/amazon_products..xlsx')
+            self.df.to_json('../../scraped_data/json/amazon_products.json')
+
+        except Exception as exc:
+            print("! ", exc)
+
+        else:
+            print("Data Storage successful!")
 
 
 if __name__ == "__main__":
