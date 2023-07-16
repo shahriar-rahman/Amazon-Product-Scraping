@@ -3,6 +3,10 @@
 
 An automated scraping tool that locates a particular product and, by utilizing the Selenium Webdriver, crawls and extracts all the information based on a user search. This is an updated version of the project with the new Selenium update as well as improvements in file organization, code refactoring, and improvements.
 
+<div align="center">
+    <img width="75%" src="img/amazon.gif" alt="amazon.gif" >
+</div>
+
 ## Introduction
 Browsing Amazon can be very confusing due to inconsistent layouts and web page structure. 
 More importantly, the site can often be quite slow to browse due to so much traffic. 
