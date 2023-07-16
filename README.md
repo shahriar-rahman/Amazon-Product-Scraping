@@ -1,4 +1,4 @@
-# Amazon Product Scraping
+# Scraping Amazon Products based on a User Search
 ===========================================================================
 
 An automated scraping tool that locates a particular product and, by utilizing the Selenium Webdriver, crawls and extracts all the information based on a user search. This is an updated version of the project with the new Selenium update as well as improvements in file organization, code refactoring, and improvements.
