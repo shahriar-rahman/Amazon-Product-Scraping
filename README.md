@@ -53,7 +53,7 @@ The primary incentive of this research is to:
 * Implicit and Explicit Waits
 * Chrome and Chrome Options
 * Nested Pagination
-* Data Storage based on Excel, CSV, and JSON
+* Data Storage based on Excel, CSV, and JSON formats
 * Pandas and Matplotlib for examining the Scraped data
 
 </br></br>
@@ -62,48 +62,46 @@ The primary incentive of this research is to:
 ---------------------------------------------------------
 
     ├── LICENSE
-    ├── Makefile             <- Makefile with various commands
-    ├── README.md        <- The top-level README for developers using this project.
-    ├── scraping_data
-    │   ├── csv              <- Data in csv format compatible with pandas dataframe.
-    │   ├── excel           <- Data in xlsx format for better data analysis.
-    │   ├── xml             <- Data in xml format.
-    │   └── json            <- Data in Json format for better utilization.
+    |
+    ├── README.md            # The top-level README for developers using this project
+    ├── scraping_data        # Scraped Data stored in various formats
+    │   ├── csv              
+    │   ├── excel          
+    │   └── json            
     │
-    ├── img                 <- Contains project image files.
+    ├── img                    # Contains Project related files
     │   
-    ├── figures                 <- Graphs generated from the scraped data.
+    ├── graphs                # Graphs generated from the scraped data
     │
-    ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-    │                         			generated with `pip freeze > requirements.txt`
+    ├── requirements.txt        # The requirements file for reproducing the analysis environment
+    │                         			
+    ├── test_environment.txt    # This is to inspect the correct version of Python
     │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
+    ├── setup.py                # Makes project pip installable (pip install -e .) so src can be imported
+    │       
+    ├── src                    # Source code for use in this project.
+    │   ├── __init__.py        # Makes src a Python module
     │   │
-    │   ├── main            <- Contains scripts for automating web scraping using Selenium
-    │   │   └── amazon.py
+    │   ├── crawler            # Primary Selenium script to initiate crawling
+    │   │   └── crawler.py
+    │   │   
+    │   ├── controller            # Script that can be modified if the DOM structure receives any overhaul in future. Also contains user preferred items to scrape.
+    │   │   └── controller.py
     │   │
-    │   ├── visualization   <- Scripts folder for data analysis and visualization
+    │   ├── visualization           # Script for data analysis and visualization
     │       └── visualize.py
-    │
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
 
 --------
-## Methods used:
-• Selenium 4.8.3
+</br></br>
 
-• Webdriver and Expected Conditions
+### ◘ Requirements
+* selenium~=4.8.3
+* pandas~=2.0.0
+* openpyxl~=3.1.2
+* matplotlib~=3.7.1
+* seaborn~=0.12.2
+* setuptools~=65.5.1
 
-• System queue, Implicit and Explicit Waits
-
-• Chrome and Chrome Options
-
-• Nested Pagination
-
-• DataFrame Manipulation using Pandas
-
-• Data Storage using CSV, Excel, and JSON format
+</br></br>
 
 ===========================================================================
