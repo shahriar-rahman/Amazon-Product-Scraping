@@ -10,7 +10,7 @@ An automated scraping tool that locates a particular product and, by utilizing t
 
 </br></br>
 
-### Introduction
+### Introduction 
 Amazon.com is an American multinational technology company focusing on e-commerce, cloud computing, online advertising, digital streaming, and artificial intelligence. It has been often referred to as "one of the most influential economic and cultural forces in the world," and is often regarded as one of the world's most valuable brands. Additionally, it is considered one of the Big Five American technology companies, alongside Alphabet (parent company of Google), Apple, Meta (formerly Facebook, Inc.), and Microsoft. Amazon was founded by Jeff Bezos from his garage in Bellevue, Washington.
 
 However, it is important to mention that browsing the site can pose some challenges as it is quite confusing due to the lackluster layouts and inconsistent web page structure. Furthermore, the site can often be quite slow to browse due to extensive traffic. As a result, comparing multiple products can be a much more difficult process than it seems as it affects the user's decision-making as it requires browsing all the links for the same type of products with different specifications. Therefore, it is imperative to bypass the inconvenience a user might face otherwise, by automating the search procedure on the Amazon site, scraping relevant information, and displaying comprehensively in a tabular format making it easy for the user to compare and analyze for a better purchase decision on Amazon.
