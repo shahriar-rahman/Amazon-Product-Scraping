@@ -168,11 +168,11 @@ In order to *install* the required packages on the local machine, Open pip and r
 ```
 > pip install selenium               
 
-> pip install pandas                                                                                      
+> pip install pandas                                                                                 
 
 > pip install seaborn
 
-> pip install matplotlib                       
+> pip install matplotlib                  
 ```
 
 <br/><br/>
