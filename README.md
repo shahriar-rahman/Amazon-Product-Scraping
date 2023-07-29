@@ -8,7 +8,7 @@ An automated scraping tool that locates a particular product and, by utilizing t
     <img width="65%" src="img/amazon1.gif" alt="amazon.gif" >
 </div>
 
-</br>
+</br></br>
 
 - [Introduction](#-introduction)
     - [Background](#-background)
@@ -18,17 +18,17 @@ An automated scraping tool that locates a particular product and, by utilizing t
     - [Scraping Procedure](#-scraping-procedure)
 - [System Design](#-system-design)
     - [Selenium](#-selenium)
-    - [Methodologies & Concepts](#-Methodologies-and-concepts)
+    - [Methodologies & Concepts](#-methodologies-and-concepts)
 - [Project Specifications](#-project-specifications)
     - [Project Organization](#-project-organization)
-    - [Libraries & Technologies](#-libraries-and-Technologies)
+    - [Libraries & Technologies](#-libraries-and-technologies)
 - [Installation](#-installation)
     - [Module Installation](#-module-installation)
     - [Library Installation](#-library-installation)
     - [Supplementary Resources](#-supplementary-resources)
 - [License](#-license)
 
-</br></br>
+</br>
 
 ## ◘ Introduction  
 
@@ -92,7 +92,7 @@ The Selenium WebDriver drives a browser natively, as a user would, either locall
 
 </br></br>
 
-## ◘ Poject Specifications
+## ◘ Project Specifications
 
 ### • Project Organization
 ---------------------------------------------------------
