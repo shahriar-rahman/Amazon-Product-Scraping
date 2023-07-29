@@ -160,7 +160,7 @@ python setup.py sdist bdist_wheel
 pip install .                                 
 ```
 
-<br/><br/>
+<br/>
 
 ### • Library Installation
 Using pip:
@@ -175,7 +175,7 @@ In order to *install* the required packages on the local machine, Open pip and r
 > pip install matplotlib                  
 ```
 
-<br/><br/>
+<br/>
 
 ### • Supplementary Resources
 For more details, visit the following links:
