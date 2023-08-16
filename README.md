@@ -10,6 +10,7 @@ An automated scraping tool that locates a particular product and, by utilizing t
 
 </br></br>
 
+## ◘ Navigation
 - [Introduction](#-introduction)
     - [Background](#-background)
     - [Objective](#-objective)
