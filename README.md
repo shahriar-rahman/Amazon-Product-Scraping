@@ -28,7 +28,7 @@ However, it is important to mention that browsing the site can pose some challen
 * Use concepts of web-scraping to find and traverse the correct Document Object Model (DOM) structure.
 * Conduct extensive search till the end of pages
 * Ensure the data scraped does not contain any missing values
-* Briefly explore the acquired data
+* Briefly explore the acquired data 
 
 </br></br>
 
